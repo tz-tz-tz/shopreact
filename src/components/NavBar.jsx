@@ -1,19 +1,53 @@
 import React from 'react'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/Button'
+
+
+const useStyles = makeStyles (theme => ({
+  offset: theme.mixins.toolbar,
+  menuButton:{
+    marginRight: theme.spacing(2)
+  },
+  title:{
+    flexGrow: 1
+  }
+}))
 
 function NavBar() {
+
+  const classes = useStyles();
+
     return (
         <div>
-            <header class="header">
-  <a href="" class="logo">Tienda Ropa Cuero</a>
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  <ul class="menu">
-    <li><a href="#work">Home</a></li>
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#careers">Categoria</a></li>
-    <li><a href="#contact">Contacto</a></li>
-  </ul>
-</header>
+          <AppBar>
+          <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              News
+            </Typography>
+            <Button variant="text" color="inherit">
+              Home
+            </Button>
+            <Button variant="text" color="inherit">
+              Home
+            </Button>
+            <Button variant="text" color="inherit">
+              Home
+            </Button>
+            <Button variant="text" color="inherit">
+              Home
+            </Button>
+            </Toolbar>
+      </AppBar>
+      <div className={classes.offset} />
+
         </div>
     )
 }
