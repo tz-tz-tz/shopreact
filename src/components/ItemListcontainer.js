@@ -1,10 +1,13 @@
 import React from 'react'
+import { Alert, AlertTitle } from '@material-ui/lab';
 
-function ItemListcontainer({titulo}) {
+
+function ItemListcontainer({titulo, name}) {
     return (
-     
-            <h2>{titulo}</h2>
-       
+        <Alert severity="success">
+        <AlertTitle>{titulo}</AlertTitle>
+        {name} — <strong>a nuestra Tienda OnLine</strong>
+        </Alert>
     )
 }
 

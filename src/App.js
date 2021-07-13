@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
-      <ItemListcontainer titulo={"Bienvenidos"}/>
+      <ItemListcontainer titulo={"Bienvenido"} name={"Matias"}/>
      </ThemeProvider>
   );
 }
