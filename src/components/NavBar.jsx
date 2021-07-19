@@ -30,21 +30,18 @@ function NavBar() {
             <CartWidget />
           </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              Tienda de Ropa
             </Typography>
             <Button variant="text" color="inherit">
               Home
             </Button>
             <Button variant="text" color="inherit">
-              Home
+              Catalogo
             </Button>
             <Button variant="text" color="inherit">
-              Home
+              Contacto
             </Button>
-            <Button variant="text" color="inherit">
-              Home
-            </Button>
-            </Toolbar>
+                      </Toolbar>
       </AppBar>
       <div className={classes.offset} />
 
