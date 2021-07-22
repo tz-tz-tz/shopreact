@@ -1,6 +1,13 @@
 import React, {useState} from 'react'
 import Button from '@material-ui/core/Button'
-import { Alert, AlertTitle } from '@material-ui/lab'
+import { Alert } from '@material-ui/lab'
+import Card from '@material-ui/core/Card';
+import Grid from '@material-ui/core/Grid';
+import CardHeader from '@material-ui/core/CardHeader';
+import { Typography } from '@material-ui/core';
+
+
+
 
 function ItemCount({initial, stock, onAdd}) {
 
@@ -24,22 +31,30 @@ function ItemCount({initial, stock, onAdd}) {
 
     return (
         <>
-      
+        
+        <Grid item xs={3}>
+        <Card>
+        <CardHeader
+        title="ItemCount"
+          />
         <Alert severity="success">
-        <AlertTitle>ItemCount</AlertTitle>
+        <Typography align="center" variant="h5">
         {cantidad}
-        </Alert>
-        <Button variant="text" color="default" onClick={handleRemove}>
+         </Typography>
+          </Alert>
+        <Button variant="contained" color="default" onClick={handleRemove} fullWidth>
           -
         </Button>
-        <Button variant="text" color="default" onClick={handleAdd}>
+        <Button variant="contained" color="default" onClick={handleAdd} fullWidth>
           +
         </Button>
         <br/>
-        <Button variant="text" color="primary" onClick={handleOnAdd}>
+        <Button variant="contained" color="primary" onClick={handleOnAdd} fullWidth>
           Add To Cart
         </Button>
-
+        </Card>
+        </Grid>
+        
         </>
     )
 }
