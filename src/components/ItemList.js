@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Item from './Item'
-import Card from '@material-ui/core/Card';
+
 
 function ItemList() {
    
@@ -37,10 +37,8 @@ useEffect(() => {
 
     return (
         <div>
-            <Item /> 
-            <ul>
-            {itemList.map(item=> <Card key={item.id}> <li>{item.title} </li></Card>)}
-            </ul>           
+             {itemList.map((items)=> <item key={items.id} nombre={items.title} precio={items.price}/>)}
+                    
         </div>
     )
 }
