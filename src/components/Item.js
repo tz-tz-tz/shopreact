@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemList from './ItemList'
 
 function Item(props) {
     return (

@@ -37,7 +37,7 @@ useEffect(() => {
 
     return (
         <div>
-             {itemList.map((items)=> <item key={items.id} nombre={items.title} precio={items.price}/>)}
+             {itemList.map((items)=> <Item key={items.id} nombre={items.title} precio={items.price}/>)}
                     
         </div>
     )
