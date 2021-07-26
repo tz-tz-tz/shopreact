@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import ItemCount from './ItemCount'
 import ItemList from './ItemList'
@@ -10,6 +10,7 @@ const handleCount=(cant)=> {
 
 function ItemListcontainer({titulo, name}) {
 
+
       return (
        <>
         <Alert severity="success">
@@ -19,6 +20,7 @@ function ItemListcontainer({titulo, name}) {
         <br/>
         <ItemCount stock={5} initial={1} onAdd={handleCount}/>
         <ItemList />
+        
 
       </>
     )
