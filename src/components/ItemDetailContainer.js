@@ -5,26 +5,27 @@ import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
     const [item, setItem] = useState([])
-
     const { categoryId } = useParams()
 
-    console.log(categoryId);  
-
     useEffect(() => {
-        if (categoryId===undefined) {
+        
+        
+        if(categoryId===undefined){
             getItems()
             .then(resp => setItem(resp))
-        } else {
+        }else{
             getItems()
             .then(resp => setItem(resp.filter(it => it.categoria===categoryId)))
-                
         }
+            
     }, [categoryId])
 
+    console.log(categoryId);  
+    console.log(item)
 
     return (
         <div>
-           {item.map((items)=> <ItemDetail key={items.id} name={items.nombre} price={items.precio}/>)}
+           {item.map((items)=> <ItemDetail key={items.id} name={items.nombre} price={items.precio} categoria={items.categoria} url={items.url}/>)}
         </div>
     )
 }
