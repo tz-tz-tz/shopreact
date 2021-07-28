@@ -35,15 +35,9 @@ function NavBar() {
             </Typography>
                        
             <NavLink to="/"><Button variant="contained" color="primary" >  Home</Button> </NavLink> 
-            <NavLink to="/category/pantalones"><Button variant="contained" color="primary" >  Pantalones</Button> </NavLink> 
-
-
+            <NavLink to="/category/pantalones" ><Button variant="contained" color="primary" >  Pantalones</Button> </NavLink> 
             <NavLink to="/category/camperas"><Button variant="contained" color="primary" >  Camperas</Button> </NavLink> 
-
-            
-            
-           
-                      </Toolbar>
+          </Toolbar>
       </AppBar>
       <div className={classes.offset} />
 
