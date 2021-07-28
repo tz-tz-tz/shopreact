@@ -13,15 +13,18 @@ function App() {
       <Switch>
         <ThemeProvider theme={theme}>         
           <Container>
-          <Route exact path='/'>
-            <ItemListcontainer titulo={"Bienvenido"} name={"Matias"}/>
-          </Route>
-          <Route exact path='/category'>
-            <ItemDetailContainer />
-          </Route>
-          <Route exact path='/category/:categoryId'>
-            <ItemDetailContainer />
-          </Route>
+              <Route exact path='/'>
+                <ItemListcontainer titulo={"Bienvenido"} name={"Matias"}/>
+              </Route>
+              <Route exact path='/category'>
+                <ItemDetailContainer />
+              </Route>
+              <Route exact path='/category/:categoryId'>
+                <ItemDetailContainer />
+              </Route>
+              <Route exact path='/item/:itemId'>
+                <ItemDetailContainer />
+              </Route>
           </Container>
         </ThemeProvider>
       </Switch>

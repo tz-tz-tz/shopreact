@@ -5,22 +5,21 @@ import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
     const [item, setItem] = useState([])
-    const { categoryId } = useParams()
+    const { itemId } = useParams()
 
     useEffect(() => {
         
-        
-        if(categoryId===undefined){
+        if(itemId===undefined){
             getItems()
             .then(resp => setItem(resp))
         }else{
             getItems()
-            .then(resp => setItem(resp.filter(it => it.categoria===categoryId)))
+            .then(resp => setItem(resp.filter(it => it.id===itemId)))
         }
             
-    }, [categoryId])
+    }, [itemId])
 
-    console.log(categoryId);  
+    console.log(itemId);  
     console.log(item)
 
     return (
