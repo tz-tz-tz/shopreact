@@ -27,9 +27,11 @@ function NavBar() {
         <div>
           <AppBar>
           <Toolbar>
+            <NavLink to="/Cart">
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <CartWidget />
           </IconButton>
+          </NavLink>
             <Typography variant="h6" className={classes.title}>
               Tienda de Ropa
             </Typography>

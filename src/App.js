@@ -5,6 +5,7 @@ import theme from './theme'
 import ItemListcontainer from './components/ItemListcontainer'
 import Container from '@material-ui/core/Container';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart'
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
               </Route>
               <Route exact path='/category'>
                 <ItemDetailContainer />
+              </Route>
+              <Route exact path='/cart'>
+                <Cart />
               </Route>
               <Route exact path='/category/:categoryId'>
                 <ItemListcontainer />
