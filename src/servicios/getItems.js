@@ -1,5 +1,5 @@
 const itemProductos=[{
-    id: 1,
+    id: "1",
     nombre: 'Campera Roja',
     precio: 12300,
     categoria: "camperas",
