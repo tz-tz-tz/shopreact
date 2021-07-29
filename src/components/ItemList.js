@@ -24,7 +24,7 @@ console.log(itemList)
 
     return (
         <div>
-             {itemList.map((items)=> <Item key={items.id} nombre={items.nombre} precio={items.precio} url={items.url}/>)}
+             {itemList.map((items)=> <Item key={items.id} nombre={items.nombre} precio={items.precio} url={items.url} id={items.id}/>)}
         </div>
     )
 }
