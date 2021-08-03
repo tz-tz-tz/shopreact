@@ -7,11 +7,11 @@ import CardHeader from '@material-ui/core/CardHeader';
 import { Typography } from '@material-ui/core';
 
 
-
-
 function ItemCount({initial, stock, onAdd}) {
 
     const [cantidad, setCantidad] = useState(initial)
+
+    const [show, setShow] = useState(false)
     
     const handleAdd=()=>{
         if (cantidad < stock) {
@@ -26,12 +26,15 @@ function ItemCount({initial, stock, onAdd}) {
     }
 
     const handleOnAdd=()=>{
-        onAdd(cantidad)
+        onAdd(cantidad);
+        setShow(true)
+        
     }
+    console.log(show)
+    console.log(cantidad)
 
     return (
         <>
-        
         <Grid item xs={3}>
         <Card>
         <CardHeader
@@ -52,6 +55,7 @@ function ItemCount({initial, stock, onAdd}) {
         <Button variant="contained" color="primary" onClick={handleOnAdd} fullWidth>
           Add To Cart
         </Button>
+        {show && <Button variant="contained" color="secondary" fullWidth>terminar la compra</Button>}
         </Card>
         </Grid>
         
